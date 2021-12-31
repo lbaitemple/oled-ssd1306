@@ -167,12 +167,16 @@ namespace OLED {
     export function writeStringNewLine(str: string) {
         writeString(str)
         newLine()
+        command(SSD1306_NORMALDISPLAY);
+        command(SSD1306_DISPLAYON);
     }
     //% block="show number $n"
     //% weight=7
     export function writeNumNewLine(n: number) {
         writeNum(n)
         newLine()
+        command(SSD1306_NORMALDISPLAY);
+        command(SSD1306_DISPLAYON);
     }
     //% block="insert newline"
     //% weight=4
